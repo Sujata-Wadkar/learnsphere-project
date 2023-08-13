@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head><title>learnsphere</title>
+	<meta charset="UTF-8">
+	    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 
+	    <link rel="stylesheet" th:href="@{/css/style.css}" />
+	</head>
+	<body style="background-color: gold;">
+		 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top"> AddLesson</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item" ><a class="nav-link" href="/trainerhome">Home</a></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+		
+		<div id="container1">
+       <form action="/addlesson" method="post">
+		  
+		   <div>
+		   <label>Course Id:</label>
+		   <input type="text" name="courseId" required>
+		   </div>
+		   <br><br>
+		   <div>
+		   <label>Lesson Id:</label>
+		   <input type="text" name="lessonId" required>
+		   </div>
+		   <br><br>
+		   <div>
+		   <label>lesson Name:</label>
+		   <input type="text" name="lessonName" required>
+		  </div>
+		  <br><br>
+		  <div>
+		   <label>lesson Topic:</label>
+		   <input type="text" name="lessonTopics" required>
+		  </div>
+		  <br><br>
+		  <div>
+		   <label>Video Topic :</label>
+		   <input type="text" name="videoTopic" required>
+		  </div>
+		  <br><br>
+		  <div>
+		   <input type="submit" value="add lesson">
+		   </div>
+		   
+	   </form>
+		</div>
+	</body>
+	
+</html>
